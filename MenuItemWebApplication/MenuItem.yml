@@ -15,7 +15,7 @@ spec:
         app: MenuItemWebApplication
     spec:
       containers:
-      - name: menuitemwebapplication
+      - name: menuitemwebcontainer
         image: menuitemcontainer.azurecr.io/menuitemserviceiamge:latest
         ports:
         - containerPort: 8080
