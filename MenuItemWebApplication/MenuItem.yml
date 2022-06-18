@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: menuitemwebapplication-deployment
   labels:
-    app: MenuItemWebApplication
+    app: menuitemwebapplication
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: MenuItemWebApplication 
+      app: menuitemwebapplication
   template:
     metadata:
       labels:
-        app: MenuItemWebApplication
+        app: menuitemwebapplication
     spec:
       containers:
-      - name: menuitemwebcontainer
-        image: menuitemcontainer.azurecr.io/menuitemserviceiamge:latest
+      - name: menuitemwebapplication
+        image: menuitemcontainer.azurecr.io/menuitemserviceimage:latest
         ports:
         - containerPort: 8080
       imagePullSecrets:
@@ -31,4 +31,4 @@ spec:
   ports:
   - port: 80
   selector:
-    app: MenuItemWebApplication
+    app: menuitemwebapplication
