@@ -20,7 +20,7 @@ spec:
         ports:
         - containerPort: 8080
       imagePullSecrets:
-      - name: webiapisecret
+      - name: webapisecret
 ---
 apiVersion: v1
 kind: Service
